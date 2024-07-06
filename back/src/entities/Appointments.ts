@@ -1,32 +1,27 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import User from "./User";
 
-
 @Entity({
-    name:"appointments"
+  name: "appointments",
 })
 class Appointment {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @PrimaryGeneratedColumn()
-    id: number
+  @Column()
+  date: Date;
 
-    @Column()
-    date: Date
+  @Column()
+  time: string;
 
-    @Column()
-    time: string
+  @Column()
+  status: "confirmed" | "cancelled";
 
-    @Column({
-        default: "Active"
-    })
-    status: string
+  @Column()
+  description: string;
 
-    @Column()
-    description: string
-
-    @ManyToOne(() => User, (user) => user.appointments)
-    user: User
-    
+  @ManyToOne(() => User, (user) => user.appointments)
+  user: User;
 }
 
-export default Appointment
+export default Appointment;

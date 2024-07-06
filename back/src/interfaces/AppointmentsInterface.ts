@@ -1,6 +1,6 @@
 enum status {
     ACTIVE = "Active",
-    CANCELED = "Canceled",
+    CANCELLED = "Cancelled",
     COMPLETED =  "Completed"
 }
 
