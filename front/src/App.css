@@ -1,0 +1,15 @@
+
+  body {
+    background-image: url('https://www.escueladesarts.com/wp-content/uploads/fotografia-digital.jpg');
+    background-size: cover; /* Hace que la imagen cubra toda la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que la imagen permanezca fija durante el desplazamiento */
+    background-position: center; /* Centra la imagen en la página */
+  };
+
+  #root {
+    min-height: 100vh; /* Altura mínima igual a la altura del viewport */
+    overflow-y: auto; /* Habilita el scroll vertical cuando sea necesario */
+    padding: 20px;
+    box-sizing: border-box;
+  }

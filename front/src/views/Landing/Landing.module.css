@@ -1,0 +1,4 @@
+.landingContainer {
+    display: flex;
+    flex-direction: column;
+}

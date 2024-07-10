@@ -1,0 +1,23 @@
+.footer {
+    background: transparent black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .socialIcons {
+    margin-top: 20px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: white;
+    display: inline-block;
+  }
+  
+  /* .icon:hover {
+    color: #000000;
+} */

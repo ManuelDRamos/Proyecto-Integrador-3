@@ -1,0 +1,42 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent #1f1b1b;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .imgTest {
+    width: 100px;
+    height: auto;
+    border-radius: 50%; /* Hace que los bordes sean redondeados (círculo) */
+    transition: transform 0.3s ease; /* Añade una transición suave */
+  }
+  
+  .imgTest:hover {
+    transform: scale(1.1); /* Escala ligeramente el logo al hacer hover */
+  }
+  
+  
+  .navbarList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbarItem {
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  
+  .navbarLink {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbarLink:hover {
+    text-decoration: underline;
+  }
