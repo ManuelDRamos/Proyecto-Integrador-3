@@ -4,6 +4,7 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 import styles from "./Login.module.css"; 
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -15,19 +16,16 @@ const Login = () => {
             console.log("Respuesta del servidor:", response.data); 
     
             if (response.status === 200) {
-                // Verifica la estructura de la respuesta del servidor
                 console.log("Datos recibidos:", response.data);
-                const username = response.data.username; // Asegúrate de ajustar esto según la estructura real de tu respuesta
+                const username = response.data.username;
 
-                // Mostrar SweetAlert de éxito con mensaje de bienvenida
                 Swal.fire({
                     icon: 'success',
                     title: `¡Bienvenido, ${username}!`,
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 3000
                 });
                 
-                // Redirigir al usuario a la página principal
                 navigate("/");
             } else {
                 Swal.fire({
@@ -47,38 +45,40 @@ const Login = () => {
     };
 
     return (
-        <Formik
-            initialValues={{
-                username: "",
-                password: ""
-            }}
-            validate={validateLogin}
-            onSubmit={(values, { resetForm }) => {
-                postData(values);
-                resetForm();
-            }}
-        >
-            {({ isSubmitting }) => (
-                <Form className={styles.loginForm}>
-                    <h2>Login de usuario</h2>
-                    <div className={styles.inputGroup}>
-                        <label>Nombre de usuario:</label>
-                        <Field type="text" name="username" placeholder="username" />
-                        <ErrorMessage className={styles.error} name="username" component="div" />
-                    </div>
+        <div className={styles.container}>
+            <Formik
+                initialValues={{
+                    username: "",
+                    password: ""
+                }}
+                validate={validateLogin}
+                onSubmit={(values, { resetForm }) => {
+                    postData(values);
+                    resetForm();
+                }}
+            >
+                {({ isSubmitting }) => (
+                    <Form className={styles.loginForm}>
+                        <h2>Login de usuario</h2>
+                        <div className={styles.inputGroup}>
+                            <label className={styles.label}>Nombre de usuario:</label>
+                            <Field type="text" name="username" placeholder="username" />
+                            <ErrorMessage className={styles.error} name="username" component="div" />
+                        </div>
 
-                    <div className={styles.inputGroup}>
-                        <label>Contraseña:</label>
-                        <Field type="password" name="password" placeholder="" />
-                        <ErrorMessage className={styles.error} name="password" component="div" />
-                    </div>
-
-                    <button className={styles.submitButton} type="submit" disabled={isSubmitting}>
-                        {isSubmitting ? 'Cargando...' : 'Login'}
-                    </button>
-                </Form>
-            )}
-        </Formik>
+                        <div className={styles.inputGroup}>
+                            <label className={styles.label}>Contraseña:</label>
+                            <Field type="password" name="password" placeholder="" />
+                            <ErrorMessage className={styles.error} name="password" component="div" />
+                        </div>
+                        <button className={styles.submitButton} type="submit" disabled={isSubmitting}>
+                            {isSubmitting ? 'Cargando...' : 'Login'}
+                        </button>
+                    </Form>
+                )}
+            </Formik>
+            <Footer className={styles.footer} />
+        </div>
     );
 };
 

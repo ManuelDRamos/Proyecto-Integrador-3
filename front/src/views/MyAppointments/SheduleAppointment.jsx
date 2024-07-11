@@ -65,7 +65,7 @@ const ScheduleAppointment = () => {
           icon: "success",
           title: "Turno registrado exitosamente",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 3000,
         });
 
         // Forzar la actualización del componente

@@ -1,27 +1,18 @@
 .faqContainer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: transparent #fff;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
-    color:white; /* Color de texto principal */
-  }
-  
-  /* .faqContainer:hover {
-    transform: scale(1.05);
-  } */
-  
-  .question {
-    margin-bottom: 20px;
-  }
-  
-  .question h3 {
-    margin-bottom: 10px;
-    color: whitesmoke;
-  }
-  
-  .question p {
-    color: white;
-  }
-  
+  margin-top: 40px;
+  padding: 20px;
+  background-color: transparent #fff;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  color: white; /* Color de texto principal */
+  width: 300px; /* Ajusta este valor según el tamaño deseado */
+  float: right; /* Mueve el contenedor hacia el lado derecho */
+  margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.question p {
+  color: white;
+  font-size: 30px;
+}
+

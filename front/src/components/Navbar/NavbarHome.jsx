@@ -1,7 +1,25 @@
+import  { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector(`.${styles.navbarContainer}`);
+      if (window.scrollY > 50) {
+        navbar.classList.add(styles.shrink);
+      } else {
+        navbar.classList.remove(styles.shrink);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <nav className={styles.navbarContainer}>
       <Link to="/">

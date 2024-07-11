@@ -1,42 +1,54 @@
 .navbarContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent #1f1b1b;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  .imgTest {
-    width: 100px;
-    height: auto;
-    border-radius: 50%; /* Hace que los bordes sean redondeados (círculo) */
-    transition: transform 0.3s ease; /* Añade una transición suave */
-  }
-  
-  .imgTest:hover {
-    transform: scale(1.1); /* Escala ligeramente el logo al hacer hover */
-  }
-  
-  
-  .navbarList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .navbarItem {
-    margin-right: 20px;
-    font-size: 18px;
-  }
-  
-  .navbarLink {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .navbarLink:hover {
-    text-decoration: underline;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  max-width: 1300px; /* Limita el ancho máximo para que no sea excesivamente ancho */
+  margin: 0 auto; /* Centra el navbar horizontalmente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent #1f1b1b;
+  color: white;
+  padding: 10px 40px; /* Ajusta el padding para expandir el navbar hacia la derecha */
+  z-index: 800; 
+}
+
+/* Ajusta el padding del cuerpo para evitar que el contenido se solape con el navbar fijo */
+/* body {
+  padding-top: 50px; /* Ajusta según la altura de tu navbar para evitar solapamiento */
+
+
+/* Resto de estilos para tus elementos */
+.imgTest {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.imgTest:hover {
+  transform: scale(1.1);
+}
+
+.navbarList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbarItem {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbarLink:hover {
+  text-decoration: underline;
+}

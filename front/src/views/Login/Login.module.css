@@ -1,10 +1,18 @@
+/* Login.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .loginForm {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: transparent  #1f1b1b;
+    background-color: transparent;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 .inputGroup {
@@ -31,7 +39,7 @@ input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-top: 15px;
-    background-color:  #1f1b1b;
+    background-color: #1f1b1b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -47,4 +55,8 @@ input[type="password"] {
     color: red;
     font-size: 14px;
     margin-top: 5px;
+}
+
+.footer {
+    margin-top: auto;
 }

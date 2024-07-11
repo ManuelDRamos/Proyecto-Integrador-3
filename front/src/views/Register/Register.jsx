@@ -39,7 +39,7 @@ const Register = () => {
                     icon: 'success',
                     title: 'Usuario registrado correctamente',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 3000
                 });
                 navigate("/login");
             } else {
